@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function NewTodoForm( onSubmit ) {
+export function NewTodoForm({ onSubmit }) {
     const [newItem, setNewItem] = useState("");
 
     function handleSubmit(e) {
@@ -8,11 +8,11 @@ export function NewTodoForm( onSubmit ) {
         if (newItem === "") return;
 
         onSubmit(newItem);
-  
+
         setNewItem("");
     }
 
-    return (  
+    return (
         <form onSubmit={handleSubmit} className="new-item-form">
             <div className="form-row">
                 <label htmlFor="item">New Item</label>
